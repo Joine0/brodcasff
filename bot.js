@@ -403,4 +403,33 @@ ${guild.memberCount} أعضآء السيرفر
    }
 });
 
+ client.on('message' , message => {
+     var prefix = "Bc"
+let args = message.content.split(' ').slice(1)
+if(message.content.startsWith(prefix + 'setGame')) {
+    if(message.author.id != '274923685985386496') return;
+    else {
+    client.user.setGame(args.join(' '));
+}
+}
+if(message.content.startsWith(prefix + 'setStreaming')) {
+    if(message.author.id != '274923685985386496') return;
+    else {
+    client.user.setActivity(args.join(' '), {type: 'STREAMING', url:'http://www.twitch.tv/rebel711'});
+}
+}
+if(message.content.startsWith(prefix + 'setListening')) {
+    if(message.author.id != '274923685985386496') return;
+    else {
+    client.user.setActivity(args.join(' '), {type: 'LISTENING'});
+}
+}
+if(message.content.startsWith(prefix + 'setWatching')) {
+    if(message.author.id != '274923685985386496') return;
+    else {
+    client.user.setActivity(args.join(' '), {type: 'WATCHING'});
+}
+}
+});
+
 client.login(process.env.BOT_TOKEN);
