@@ -387,7 +387,7 @@ ${guild.memberCount} أعضآء السيرفر
  .setThumbnail(client.user.avatarURL)     
  .setAuthor(message.author.username, message.author.avatarURL)
  .setTitle('Click Here To Invite The Bot | انقر هنا لاضافة البوت')
- .setURL('https://discordapp.com/api/oauth2/authorize?client_id=445713545582084096&permissions=34881&scope=bot')
+ .setURL('https://discordapp.com/api/oauth2/authorize?client_id=445713545582084096&permissions=120897&scope=bot')
   message.channel.sendEmbed(embed);
    }
 });
@@ -399,7 +399,7 @@ ${guild.memberCount} أعضآء السيرفر
  .setThumbnail(client.user.avatarURL)     
  .setAuthor(message.author.username, message.author.avatarURL)
  .setTitle('Click Here To Invite The Bot | انقر هنا لاضافة البوت')
- .setURL('https://discordapp.com/api/oauth2/authorize?client_id=445713545582084096&permissions=34881&scope=bot')
+ .setURL('https://discordapp.com/api/oauth2/authorize?client_id=445713545582084096&permissions=120897&scope=bot')
   message.channel.sendEmbed(embed);
    }
 });
