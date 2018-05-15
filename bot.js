@@ -320,15 +320,16 @@ ${args}
 });
 
 
+
 client.on("message", message => {
  if (message.content === "R-bchelp") {
 
   const embed = new Discord.RichEmbed() 
       .setColor("RANDOM")
-      .setThumbnail(message.author.avatarURL)
+      		.setFooter(`R-bchelp لإضهآر هذه القائمة | R-bcinv لدعوة البوت `)
       .setDescription(` 
    ** بوت R-bc أوآمر **
-        للتفعيل 
+         
 R-bc1    ⇏ لإرسآل رسالة لجميع أعضآء السيرفر بدون امبيد
 R-bc2    ⇏  لإرسآل رسالة لجميع أعضآء السيرفر بإمبيد
 R-bco1   ⇏  لإرسآل رسالة للأون لاين فقط بدون امبيد
@@ -340,11 +341,11 @@ R-1send  ⇏ لإرسآل رسآلة لشخص عن طريق البوت مع ظه
 R-2send  ⇏ لإرسآل رسآلة لشخص عن طريق البوت بدون ظهور أسمك 
 `);
 
-
 message.channel.sendEmbed(embed)
 
 }
 }); 
+
 
 client.on('message', message => {
             if(!message.channel.guild) return;
