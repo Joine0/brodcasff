@@ -433,5 +433,15 @@ if(message.content.startsWith(prefix + 'setWatching')) {
 }
 }
 });
+client.on('message', message => {
+     if (message.content === "B-bot") {
+ if(!message.author.id === '274923685985386496') return;
+message.channel.sendMessage(`
+ ${client.guilds.size} عدد السيرفرات 
+[ ${client.users.size} / ${client.users.filter(m => m.presence.status !== 'online').size} ] عدد المستخدمين
+ 
+`);
+    }
+});
 
 client.login(process.env.BOT_TOKEN);
