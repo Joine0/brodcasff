@@ -350,8 +350,8 @@ message.channel.sendEmbed(embed)
 client.on('message', message => {
             if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('R-bcc.')){
- if(!message.author.id !== '274923685985386496') return;
+if (message.content.startsWith('B-bc.')){
+    if(message.author.id != '274923685985386496')  return message.reply('**relly ?**')
 message.channel.sendMessage('جار ارسال الرسالة');
 message.channel.sendMessage(`[ ${client.users.size} / ${client.users.filter(m => m.presence.status !== 'online').size} ] عدد المستلمين `);
 
@@ -360,6 +360,7 @@ m.sendMessage(args)
 })
 }
 });
+
 
 client.on("guildCreate", guild => {
 client.channels.get("425722377406644224").send(`
